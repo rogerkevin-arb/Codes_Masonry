@@ -25,10 +25,35 @@ In addition, the proposed algorithm for brick classification consists of two sta
 
 
 ## How to Run the Models
-...
+
+To run the code, you must have the training and validation images and masks ready. These should meet the orthogonality recommendations and have an approximate resolution of 5 pixels/mm for the crack semantic segmentation task. These characteristics are not required for the other tasks involving classification and bounding box detection.
+
+![Architecture Overview](images/visualirr2.png)
+![Architecture Overview](images/clasL.png)
+![Architecture Overview](images/EjeSpa.png)
+
+
+It is recommended to use Google Colab, separating the code blocks marked with “#----” into individual cells. If you want to test the pre-trained models for confined masonry with irregular surfaces, you can download the .h5 files and run them using the validation images.
+
+![Architecture Overview](images/escalaHsv.png)
+![Architecture Overview](images/esque.png)
 
 ## Dataset
-...
 
+The Dataset folder contains the data used for training and testing the models.
 ## References
-...
+
+El modelo propuesto para la tarea de segmentación surge apartir del modelo propuesto en el estudio de Dais et .al [1]. Asimismo se referencian otras fuentes que se usaron.  
+
+1. D. Dais, İ. E. Bal, E. Smyrou, V. Sarhosis, *Automatic crack classification and segmentation on masonry surfaces using convolutional neural networks and transfer learning*, **Automation in Construction**, 125 (2021), 103606. [https://doi.org/10.1016/j.autcon.2021.103606](https://doi.org/10.1016/j.autcon.2021.103606)
+
+2. O. Oktay, J. Schlemper, L. L. Folgoc, M. Lee, M. Heinrich, K. Misawa, K. Mori, S. McDonagh, N. Y. Hammerla, B. Kainz, B. Glocker, D. Rueckert, *Attention U-Net: Learning where to look for the pancreas*, **arXiv preprint**, arXiv:1804.03999 (2018). [https://arxiv.org/abs/1804.03999](https://arxiv.org/abs/1804.03999)
+
+3. K. He, X. Zhang, S. Ren, J. Sun, *Deep residual learning for image recognition*, in: **Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)**, 2016, pp. 770–778.
+
+
+
+
+
+
+
