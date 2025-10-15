@@ -23,13 +23,20 @@ The proposed model for the crack semantic segmentation task is based on the UNet
 In addition, the proposed algorithm for brick classification consists of two stages. The first involves preprocessing the 512×512 image before feeding it into the CNN model, which corresponds to the second stage.
 ![Architecture Overview](images/Cla.png)
 
+The convolutional layers helped identify patterns, which was further enhanced through transfer learning.
+![Architecture Overview](images/Conv2D.png)
+
 
 ## How to Run the Models
 
 To run the code, you must have the training and validation images and masks ready. These should meet the orthogonality recommendations and have an approximate resolution of 5 pixels/mm for the crack semantic segmentation task. These characteristics are not required for the other tasks involving classification and bounding box detection.
 
 ![Architecture Overview](images/visualirr2.png)
+The validation dataset for the brick type classification task undergoes pixel reduction through resizing and grayscale conversion, which helps decrease information load while maintaining good accuracy in predicting the corresponding class.
+
 ![Architecture Overview](images/clasL.png)
+For spalling region detection, by providing high-quality data, the YOLOv11 architecture successfully detected spalling in bricks, mortar, and confinement elements.
+
 ![Architecture Overview](images/EjeSpa.png)
 
 
