@@ -68,12 +68,16 @@ outputs = Conv2D(1, 1, padding="same", activation="sigmoid")(d4)
 model = Model(inputs=[inputs], outputs=[outputs])
 
 
+# ------------------------------------------------------------------------------
+
+
 model.compile(optimizer = Adam(learning_rate=0.001),
               loss=Weighted_Cross_Entropy(10),
               metrics=['accuracy', f1_score, iou_metric, precision_metric, recall_metric])
 
 model.summary()
 
+# ------------------------------------------------------------------------------
 
 
 # CALLBACKS
@@ -102,6 +106,9 @@ callbacks = [
     tf.keras.callbacks.TensorBoard(log_dir='logs'),
     logger
 ]
+
+# ------------------------------------------------------------------------------
+
 
 # ENTRENAMIENTO
 results1 = model.fit(
